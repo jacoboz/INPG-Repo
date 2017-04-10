@@ -5,7 +5,7 @@
 using namespace std;
  
  double a, b, c, p, q, delta, x1, x2;
-     int liczba;
+    
       
       
       
