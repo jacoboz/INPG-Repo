@@ -3,8 +3,6 @@
 #include <math.h>    // pow()
 
 /* rozklad_liczby - rozklada liczby na jednosci dziesiatki i setki oraz
-   okresla forme gramatyczna przyrostka                                  */
-
 int rozklad_liczby(unsigned short rozklad[4], unsigned long liczba)
 {
   int n;
