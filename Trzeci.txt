@@ -6,7 +6,7 @@
 
 using namespace std;
 int opcja;
-int t;
+
 // funkcja wyswietlajaca informacje na temat apliackji (gorny baner)
 void info(){
      cout<<static_cast<char>(218); for(int i=0;i<78;++i) cout<<static_cast<char>(196); cout<<static_cast<char>(191);
