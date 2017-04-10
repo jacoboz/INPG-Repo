@@ -6,7 +6,7 @@ using namespace std;
 
 int main(int argc, char *argv[])
 {
-    
+    asd
     int tab[20];
     srand(time(0));
     cout<<"Wygenerowalem tablice liczb: \n";
