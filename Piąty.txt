@@ -6,7 +6,7 @@
    okresla forme gramatyczna przyrostka                                  */
 
 int rozklad_liczby(unsigned short rozklad[4], unsigned long liczba)
-{
+{sd
   int n;
   for(n=0;n<4;n++) rozklad[n]=0;    // czysci tablice
   if(0>liczba>999) return -1;       // sprawdza czy liczba jest prawidlowa
