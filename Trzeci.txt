@@ -1,0 +1,87 @@
+#include <cstdlib>
+#include <conio.h>
+#include <iostream>
+#include <string>
+#include <time.h>
+
+using namespace std;
+int opcja;
+int t;
+// funkcja wyswietlajaca informacje na temat apliackji (gorny baner)
+void info(){
+     cout<<static_cast<char>(218); for(int i=0;i<78;++i) cout<<static_cast<char>(196); cout<<static_cast<char>(191);
+     
+     cout<<static_cast<char>(179);
+     cout << "                                                                              ";
+     cout<<static_cast<char>(179);
+     
+     cout<<static_cast<char>(179);
+     cout << "                    AUTOMATYCZNE WYLACZANIE KOMPUTERA                         ";
+     cout<<static_cast<char>(179);
+     
+     cout<<static_cast<char>(179);
+     cout << "                                                              ver 0.9 beta    ";
+     cout<<static_cast<char>(179);
+     
+cout<<static_cast<char>(192); for(int i=0;i<78;++i)cout<<static_cast<char>(196); cout<<static_cast<char>(217);
+}
+//funkcja odpowiedzialna za wyswietlenie menu programu
+int menu(){
+     cout << " Co chcesz zrobic? " << endl;
+     cout << " <1.> Atywacja wylacznika " << endl;
+     cout << " <2.> Dezaktywacja wylacznika " << endl;
+     cout << " <3.> Wyjscie " << endl;
+     
+     do{
+          cout << " Podaj wybrana opcje: ";
+          cin >> opcja;
+          if(opcja != 1 && opcja != 2 && opcja != 3) cout << " Wybrales zla opcje, sprobuj jeszce raz! " << endl;
+     }
+     while(opcja != 1 && opcja != 2 && opcja != 3);
+     cout << endl;
+     return opcja;   
+}
+
+//Funkcja pobierajaca ilosc minut i zwaracaja wartosc w sekundach
+void czas(){
+     cout << " Po jakim czasie (w min) komputer ma zostac wylaczony?" << endl;
+     do{
+          cin >> t;
+          if(t<1) cout << " Podales zla wartosc. Nalezy ustawic przynajmniej jedna minute. Sprobuj jescze raz :";
+     }
+     while(t<1);
+     t=t*60;
+     //return t;
+}
+
+int main(int argc, char *argv[])
+{
+     do
+     {
+     system("cls");
+     info();
+     menu();     
+     if(opcja == 1){
+          czas();
+          char czas[50];
+          itoa(t,czas,10);
+          string komenda;
+          komenda = "shutdown -s -t ";
+          komenda += czas;
+          system(komenda.c_str());
+          cout << " Nacisnij dowolny klawisz aby kontynuowac. " << endl;
+          char a;
+          a = getch();
+     }
+     else if(opcja == 2){
+          system("shutdown -a");
+          cout << endl;
+          cout << " Nacisnij dowolny klawisz aby kontynuowac. " << endl;
+          char a;
+          a = getch();
+     }
+     }
+     while(opcja != 3);
+     return EXIT_SUCCESS;
+}
+ 
