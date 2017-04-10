@@ -4,7 +4,7 @@
 
 float n,x;
 
-float fib(float n)
+float fib(float n)asd
 
 {
     if (n==0)
