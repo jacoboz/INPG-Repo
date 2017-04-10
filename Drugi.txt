@@ -7,7 +7,7 @@ using namespace std;
 double pobierz(int liczba){
        while(!(cin>>liczba)){
             cout << "Podaj poprawna wartosc: ";
-  cin.clear(); 
+
   cin.sync();}
   return liczba;
        }
