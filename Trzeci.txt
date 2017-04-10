@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 #include <time.h>
-
+asd
 using namespace std;
 int opcja;
 

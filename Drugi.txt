@@ -3,7 +3,7 @@
   #include <conio.h>
      
 using namespace std;
- 
+ asd
 double pobierz(int liczba){
        while(!(cin>>liczba)){
             cout << "Podaj poprawna wartosc: ";

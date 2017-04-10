@@ -4,7 +4,11 @@
 
 float n,x;
 
+<<<<<<< HEAD
 
+=======
+float fib(float n)asd
+>>>>>>> remotes/origin/Branch-prawie-jak-lunch
 
 {
     if (n==0)
